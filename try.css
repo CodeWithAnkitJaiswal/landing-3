@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', Courier, monospace;
+    overflow-x: hidden;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: url("/images/bg-3-m.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Utility Classes */
+
+.lr-padding {
+    padding: 1rem 6vw;
+}
+
+.title {
+    font-size: 45px;
+    text-wrap: balance;
+    background: #ffffff63;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.tb-margin {
+    margin: 5rem 0;
+}
+
+.details {
+    width: 80%;
+    text-align: center;
+    text-wrap: balance;
+    color: #920000;
+    background: #ffffff5e;
+    font-size: 22px;
+    padding: 1rem 1.8rem;
+}
+
+.card-pre {
+    width: 22rem;
+    height: 28rem;
+    background: #ffffffb0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: 2px solid #920000;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #920000;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #920000;
+    color: white;
+    transform: scale(1.08);
+}
+
+.section-heading {
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-wrap: balance;
+    color: #920000;
+    margin: 2rem 0;
+}
+
+
+/* desgining */
+
+.container {
+    width: 100%;
+    backdrop-filter: blur(3px);
+    margin-top: 6rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000c2;
+    position: fixed;
+    top: -1px;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 35px;
+    letter-spacing: 4px;
+    color: #ff2c2c;
+    font-weight: 600;
+}
+
+.menu {
+    width: 60%;
+    font-size: 20px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu ul a {
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.menu ul a:hover {
+    color: #ff2c2c;
+    font-weight: 600;
+}
+
+.content {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10vw;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem;
+}
+
+.card-pre img {
+    width: 70%;
+    margin: 20px 0
+}
+
+.card-pre h5 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.video {
+    background: url(/images/youtube.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50vw;
+    width: 85%;
+    margin-top: 3rem;
+}
+
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    padding: 1.5rem 3rem;
+    background: red;
+    color: white;
+}
+
+.text h1 {
+    margin-bottom: 2rem;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+/* Faqs */
+
+.faqs {
+    display: flex;
+    font-family: Ubuntu;
+    align-items: center;
+    justify-content: center;
+}
+
+.faqbox {
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.109);
+    margin-bottom: 3rem;
+    background-color: hsl(0deg 0% 100% / 53%);
+    color: #920000;
+}
+
+.faqbox__main {
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.faqbox__main-title {
+    font-size: 4.6rem;
+    font-weight: 700;
+}
+
+.faqbox__accordion {
+    list-style: none;
+}
+
+.faqbox__accordion--ele:first-child {
+    border-top: none;
+}
+
+.faqbox__accordion--ele {
+    padding: 1.8rem 1rem;
+    border-top: 1px solid #920000;
+    font-size: 1.6rem;
+}
+
+.faqbox__accordion--ele-title {
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    text-align: left !important;
+}
+
+.faqbox__accordion--ele-content {
+    margin-top: 2rem;
+    color: red;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+
+.hidden {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.attribution {
+    margin-top: auto;
+    margin-bottom: 3rem;
+}
+
+
+/* /// MOBILE /// */
+
+@media (max-width: 41.56em) {
+    .faqbox {
+        width: 100%;
+        padding: 1rem;
+    }
+    .faqbox__main-title {
+        font-size: 3rem;
+    }
+    .faqbox__main-img {
+        width: 3rem;
+    }
+    .attribution {
+        font-size: 1.2rem;
+    }
+    .faqbox__accordion--ele-title span {
+        font-size: 1.7rem;
+    }
+    .faqbox__accordion--ele-content {
+        font-size: 1.5rem;
+    }
+    .faqbox__accordion--ele-title--img {
+        min-width: 2rem;
+    }
+}
+
+
+/* Add this CSS to style the modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 1s ease;
+    /* Apply fadeIn animation */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 31.25em) {
+    .faqbox {
+        width: 85%;
+    }
+    .box {
+        width: 85vw;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* creators */
+
+.contributors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 30px;
+    box-shadow: 0px 0px 20px 3px black;
+    border-radius: 15px;
+    background: rgb(133 133 133 / 38%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1.5px solid rgb(255 255 255 / 97%);
+    border-left: 1.5px solid rgb(255 255 255 / 67%);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+}
+
+.card-small {
+    width: 230px;
+    height: 200px;
+}
+
+.card .name {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #920000;
+    font-size: 22px;
+}
+
+.name a {
+    color: white;
+    background: black;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+}
+
+.card-small .name a {
+    color: white;
+    background: black;
+    padding: 0.5rem 1.3rem;
+    border-radius: 30px;
+    font-size: 20px;
+}
