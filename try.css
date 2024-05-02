@@ -18,7 +18,62 @@ body {
 }
 
 
+/* slide bar */
+
+
+/* For Firefox */
+
+
+/* Width of the scrollbar */
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+    /* thumb color and track color */
+}
+
+
+/* For Chrome, Safari, and Opera */
+
+
+/* Width of the scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    /* track color */
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* thumb color */
+    border-radius: 5px;
+    /* rounded corners */
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* thumb color on hover */
+}
+
+
 /* Utility Classes */
+
+.t-margin {
+    margin-top: 7rem;
+}
 
 .lr-padding {
     padding: 1rem 6vw;
@@ -27,11 +82,12 @@ body {
 .title {
     font-size: 45px;
     text-wrap: balance;
-    background: #ffffff63;
-    padding: 1rem 0;
+    background: #ffffffcc;
     width: 100%;
-    text-align: center;
     padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    align-content: center;
 }
 
 .tb-margin {
@@ -40,12 +96,14 @@ body {
 
 .details {
     width: 80%;
-    text-align: center;
     text-wrap: balance;
     color: #920000;
-    background: #ffffff5e;
+    background: #ffffff1f;
     font-size: 22px;
     padding: 1rem 1.8rem;
+    border-radius: 20px;
+    text-align: center;
+    align-content: center;
 }
 
 .card-pre {
@@ -73,12 +131,6 @@ body {
     transition: 0.5s;
 }
 
-.btn:hover {
-    background: #920000;
-    color: white;
-    transform: scale(1.08);
-}
-
 .section-heading {
     font-size: 35px;
     letter-spacing: 2px;
@@ -92,8 +144,8 @@ body {
 
 .container {
     width: 100%;
-    backdrop-filter: blur(3px);
-    margin-top: 6rem;
+    backdrop-filter: blur(4px);
+    margin-top: 5rem;
 }
 
 .nav {
@@ -113,6 +165,7 @@ body {
     letter-spacing: 4px;
     color: #ff2c2c;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .menu {
@@ -127,20 +180,37 @@ body {
     justify-content: space-around;
 }
 
+.menu ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.underline {
+    position: relative;
+    width: 0;
+    height: 0;
+    bottom: 1px;
+    border-radius: 8px;
+    background: #c60000;
+    transition: width 0.6s ease-out;
+}
+
+.menu ul li:hover .underline {
+    width: 120%;
+    height: 4px;
+}
+
 .menu ul a {
     color: white;
     text-transform: capitalize;
     letter-spacing: 2px;
 }
 
-.menu ul a:hover {
-    color: #ff2c2c;
-    font-weight: 600;
-}
-
 .content {
     width: 100%;
-    height: 40rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,9 +241,11 @@ body {
     background: url(/images/youtube.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 50vw;
+    background-position: center;
+    height: 32vw;
     width: 85%;
     margin-top: 3rem;
+    max-width: 65rem;
 }
 
 .tutorial {
@@ -186,6 +258,8 @@ body {
     padding: 1.5rem 3rem;
     background: red;
     color: white;
+    border-radius: 25px;
+    width: 80%;
 }
 
 .text h1 {
@@ -197,6 +271,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: center;
 }
 
 
@@ -214,7 +289,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.109);
     margin-bottom: 3rem;
-    background-color: hsl(0deg 0% 100% / 53%);
+    background-color: hsl(0deg 1.45% 74.01% / 76%);
     color: #920000;
 }
 
@@ -377,7 +452,7 @@ body {
     margin: 30px;
     box-shadow: 0px 0px 20px 3px black;
     border-radius: 15px;
-    background: rgb(133 133 133 / 38%);
+    background: rgb(217 217 217 / 31%);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -407,17 +482,180 @@ body {
     font-size: 22px;
 }
 
-.name a {
+.name-btn {
     color: white;
     background: black;
     padding: 0.8rem 2rem;
     border-radius: 30px;
+    cursor: pointer;
 }
 
-.card-small .name a {
-    color: white;
-    background: black;
-    padding: 0.5rem 1.3rem;
-    border-radius: 30px;
+.card-pre {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 0px 0px 20px 3px black;
+    border-radius: 15px;
+    background: rgb(202 202 202 / 75%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1.5px solid rgb(255 255 255 / 97%);
+    border-left: 1.5px solid rgb(255 255 255 / 67%);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+}
+
+.card-pre img {
+    position: absolute;
+    right: 50px;
+    pointer-events: none;
+    transform: translateY(100px);
+    transition: 1.4s;
+    width: 200px;
+    opacity: 100%;
+    bottom: 120px;
+}
+
+.card-pre:hover img {
+    transform: translateY(-110px);
+    opacity: 0;
+}
+
+.card-pre .card-pre-content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(250px);
+    opacity: 0;
+    transition: 1.6s;
+}
+
+.card-pre:hover .card-pre-content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.card-pre .card-pre-content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.card-pre .card-pre-content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 28px;
+    margin-top: 25px;
     font-size: 20px;
+    letter-spacing: 1.8px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.card-pre h2 {
+    position: relative;
+    z-index: 2;
+    color: #c60000;
+    top: -200px;
+    opacity: 100%;
+    font-size: 28px;
+    transition: 0.8s;
+    letter-spacing: 2px;
+}
+
+.card-pre:hover h2 {
+    position: relative;
+    z-index: 2;
+    color: #920000;
+    top: -300px;
+    opacity: 20%;
+}
+
+
+/* Styles for the coffee button */
+
+
+/* Styles for the coffee button */
+
+.coffee-button {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #ffeecc;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.3);
+    transition: width 0.6s ease;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 60px;
+    font-size: 0;
+    overflow: hidden;
+    height: 65px;
+    /* Initial width */
+}
+
+.coffee-button img {
+    width: 40px;
+    /* Size of the coffee icon */
+}
+
+.coffee-button #coffee-text {
+    display: none;
+    margin-left: 12px;
+    text-wrap: nowrap;
+    /* Initially hidden */
+}
+
+
+/* Expand the button */
+
+.coffee-button.expanded {
+    width: 150px;
+    font-size: 15px;
+    height: 65px;
+    /* Expanded width */
+}
+
+.coffee-button.expanded #coffee-text {
+    display: block;
+    /* Show the text when expanded */
+}
+
+.coffee-button:hover {
+    width: 150px;
+    font-size: 15px;
+    height: 65px;
+    /* Expanded width */
+}
+
+.coffee-button:hover #coffee-text {
+    display: block;
+    /* Show the text when expanded */
+}
+
+
+/* MAking Page Rasponsive */
+
+@media screen and (max-width: 980px) {
+    .menu {
+        width: 75%;
+    }
+    .title {
+        height: 100%;
+    }
+    .details {
+        height: 100%;
+    }
+    .content {
+        height: 100%;
+    }
+    .text>* {
+        text-wrap: balance;
+    }
+    .text p {
+        font-size: 18px;
+    }
 }

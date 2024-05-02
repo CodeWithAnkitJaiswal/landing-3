@@ -10,59 +10,71 @@
 
 <body>
     <div class="nav lr-padding">
-        <div class="logo">GTC</div>
+        <div class="logo" onclick="openGTC()">GTC</div>
         <div class="menu">
             <ul>
-                <li><a href="">Predictor</a></li>
-                <li><a href="">Tutorial</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Faqs</a></li>
-                <li><a href="">Creators</a></li>
+                <li class="slide"><a href="#predictor">Predictor</a><span class="underline"></span></li>
+                <li class="slide"><a href="#tutorial">Tutorial</a><span class="underline"></span></li>
+                <li class="slide"><a href="#blog">Blog</a><span class="underline"></span></li>
+                <li class="slide"><a href="#faqs">Faqs</a><span class="underline"></span></li>
+                <li class="slide"><a href="#creators">Creators</a><span class="underline"></span></li>
             </ul>
         </div>
     </div>
     <div class="container">
-        <header>
+        <header class="t-margin">
 
             <div class="content">
-                <h1 class="title">College Forecaster by JoSAA</h2>
-                    <h4 class="details tb-margin">"Effortlessly find your dream engineering college with our secure, user-friendly JEE Rank College Predictor. No login required."</h4>
-                    <h4 class="details">Josaa, Csab and Other State Councelling</h4>
+                <h1 class="title" style="font-size: 55px; letter-spacing: 4px;">College Forecaster</h2>
+                    <h4 class="details tb-margin">"Effortlessly find your dream engineering college with our secure, user-friendly JEE Rank College Predictor. No login required."<br>Josaa, Csab and Other State Councelling Avaliable</h4>
             </div>
         </header>
         <main>
-            <div class="predictor tb-margin">
+            <div class="predictor t-margin" id="predictor">
                 <div class="card-container lr-padding">
                     <div class="card-pre">
-                        <h5>Jee Mains</h5>
+                        <div class="card-pre-content">
+                            <h3>Jee Mains</h3>
+                            <a class="name-btn" onclick="openMains()">Predict</a>
+                        </div>
+                        <h2>Jee Mains</h2>
                         <img src="/images/Jeemains.png" alt="" class="bord-logo">
-                        <button class="btn">Predict</button>
                     </div>
                     <div class="card-pre">
-                        <h5>Jee Advanced</h5>
+                        <div class="card-pre-content">
+                            <h3>Jee Advanced</h3>
+                            <a class="name-btn" onclick="openAdv()">Predict</a>
+                        </div>
+                        <h2>Jee Advanced</h2>
                         <img src="/images/JeeAdv.png" alt="" class="bord-logo">
-                        <button class="btn">Predict</button>
                     </div>
                     <div class="card-pre">
-                        <h5>Csab</h5>
+                        <div class="card-pre-content">
+                            <h3>Csab</h3>
+                            <a class="name-btn" onclick="openCsab()">Predict</a>
+                        </div>
+                        <h2>Csab</h2>
                         <img src="/images/csab.png" alt="" class="bord-logo">
-                        <button class="btn">Predict</button>
                     </div>
                     <div class="card-pre">
-                        <h5>Other States</h5>
+                        <div class="card-pre-content">
+                            <h3>Other States</h3>
+                            <a class="name-btn" onclick="openOth()">Predict</a>
+                        </div>
+                        <h2>Other States</h2>
                         <img src="/images/OTHER.png" alt="" class="bord-logo">
-                        <button class="btn">Predict</button>
+
                     </div>
                 </div>
             </div>
-            <div class="tutorial lr-padding tb-margin">
+            <div class="tutorial lr-padding t-margin" id="tutorial">
                 <h2 class="title section-heading">Need Video tutorial to use it?
                     <br>Click On thumbnail 👇👇👇</h2>
                 <div class="video">
 
                 </div>
             </div>
-            <div class="blog lr-padding">
+            <div class="blog lr-padding t-margin" id="blog">
                 <h1 class="title section-heading">JoSAA 2024 Counselling: A Comprehensive Guide</h1>
                 <div class="blog-content tb-margin">
                     <div class="text">
@@ -97,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="faqs lr-padding tb-margin">
+            <div class="faqs lr-padding t-margin" id="faqs">
                 <div class="faqbox">
                     <div class="faqbox__main">
                         <img class="faqbox__main-img" src="/images/icon-star.svg" alt="">
@@ -147,13 +159,13 @@
                 </div>
             </div>
         </main>
-        <footer class="lr-padding tb-margin">
-            <div class="contributors">
+        <footer class="lr-padding t-margin">
+            <div class="contributors" id="creators">
                 <div class="Aarif">
                     <div class="card">
                         <div class="name">
                             <h3>AARIF KHAN</h3>
-                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank">Contact</a>
+                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank" class="name-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +173,7 @@
                     <div class="card">
                         <div class="name">
                             <h3>Ankit Jaiswal</h3>
-                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank">Contact</a>
+                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank" class="name-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -169,7 +181,7 @@
                     <div class="card">
                         <div class="name">
                             <h3>SUJAL CHAUDHARY</h3>
-                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank">Contact</a>
+                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank" class="name-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +189,7 @@
                     <div class="card">
                         <div class="name">
                             <h3>DIVYANSH</h3>
-                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank">Contact</a>
+                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank" class="name-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -185,24 +197,41 @@
                     <div class="card">
                         <div class="name">
                             <h3>BLACKDROME</h3>
-                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank">Contact</a>
+                            <a href="https://telegram.me/+KQI-OHXiJaIxMjBl" target="_blank" class="name-btn">Contact</a>
                         </div>
                     </div>
                 </div>
         </footer>
+
         <p style="color: #f0f8ff24;">Photo by <a style="color: #f0f8ff24;" href="https://unsplash.com/@ayaneshub" target="_blank" rel="noopener noreferrer">Ayaneshu Bhardwaj</a> on <a style="color: #f0f8ff24;" href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
+        </div>
+        <div id="coffee-button" class="coffee-button">
+            <img src="/images/coffee.jpg" alt="Coffee Icon">
+            <span id="coffee-text">Buy me a<br>coffee</span>
         </div>
 
         <script src="try.js"></script>
         <script type="text/javascript" src="vanilla-tilt.js"></script>
         <script>
             VanillaTilt.init(document.querySelectorAll(".card"), {
-                max: 20,
-                speed: 250,
+                max: 25,
+                speed: 280,
                 glare: true,
                 "max-glare": 1
             });
         </script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".card-pre"), {
+                max: 30,
+                speed: 300,
+                glare: true,
+                "max-glare": 1.5
+            });
+        </script>
+</body>
+
+</html>
+</script>
 </body>
 
 </html>
